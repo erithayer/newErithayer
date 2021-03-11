@@ -1,0 +1,38 @@
+@font-face {
+    font-family: 'ARMGUARD';
+    font-style: normal;
+    font-weight: normal;
+    src: local('ARMGUARD'), url('../../Fonts/ARMGUARD.TTF') ;
+  }
+
+.Header-container{
+    display: flex;
+    justify-content: center;
+    height: 60px;
+    width: 100vw;
+    background-color: gray;
+    color: rgb(255, 255, 255);
+    align-items: center;
+}
+
+.Header-container .Logo {
+    /* font-family: ARMGUARD; */
+    /* margin: auto 8rem; */
+    /* justify-content: center; */
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.Header-container .Links {
+    margin: auto 8rem;
+    text-decoration: none;
+
+}
+.Header-container .Links a{
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    margin: 2rem;
+}
+.Header-container .Links a:hover{
+   text-decoration: underline;
+}

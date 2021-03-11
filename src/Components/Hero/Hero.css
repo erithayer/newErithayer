@@ -1,0 +1,111 @@
+.Hero-container{
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+}
+.Hero-container .Title{
+    height: 50px;
+}
+.Hero-container .Body {
+    display: grid;
+    grid-template-columns: repeat(autofit, 20rem);
+}
+.Hero-container .Body .First-row {
+    /* background-color: #7E9EB5; */
+    height: 330px;
+    display: grid;
+    grid-template-rows: 1fr;
+    justify-items: center;
+}
+.Hero-container .Body .First-row .Row-container{
+    display: grid;
+    width: 70%;
+    grid-template-columns: repeat(5, 1fr);
+    justify-items: center;
+}
+
+.Hero-container .Body .First-row .Card {
+    display: grid;
+    grid-template-rows: 5fr 1fr;
+    margin: auto 15px;
+    width: 12rem;
+    height: 18rem;
+    background-color: rgb(255, 255, 255);
+    border: solid 1px #3c5263;
+    
+    
+}
+.Hero-container .Body .First-row .image {
+    width: auto;
+    height: 100%;
+    margin: 5px 5px;
+    border: 1px solid #3c5263;
+}
+.Hero-container .Body .First-row .image.img1 {
+      background: url(../../Images/img\ \(1\).jpg);
+    background-size: cover;
+    background-position: center;
+    
+}
+.Hero-container .Body .First-row .image.img2 {
+      background: url(../../Images/img\ \(2\).jpg);
+    background-size: cover;
+    background-position: center;
+    
+}
+.Hero-container .Body .First-row .image.img3 {
+      background: url(../../Images/img\ \(3\).jpg);
+    background-size: cover;
+    background-position: center;
+    
+}
+.Hero-container .Body .First-row .image.img4 {
+      background: url(../../Images/img\ \(4\).jpg);
+    background-size: cover;
+    background-position: center;
+    
+}
+.Hero-container .Body .First-row .image.img5 {
+      background: url(../../Images/img\ \(5\).jpg);
+    background-size: cover;
+    background-position: center;
+    
+}
+
+.Hero-container .Body .First-row .Detail {
+    /* border: 1px solid red; */
+    text-align: center;
+    margin: auto;
+
+}
+.Hero-container .Body .First-row .Detail .Name{
+   font-size: 1rem;
+}
+.Hero-container .Body .First-row .Detail .Position{
+   font-size: .8rem;
+   color: rgb(82, 82, 82);
+}
+
+@media  screen and (min-width:600px) {
+    .Hero-container .Body .First-row .Row-container{
+        
+        width: 100%;
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .Hero-container .Body .First-row .Card{
+        margin: 0;
+    }
+}
+@media  screen and (min-width:900px) {
+    .Hero-container .Body .First-row .Row-container{
+        width: 90%;
+        grid-template-columns: repeat(3, 1fr);
+        justify-content: center;
+    }
+  
+}
+
+
+
+
+

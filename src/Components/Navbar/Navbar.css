@@ -1,0 +1,40 @@
+.Navbar-container{
+    height: 40px;
+    width: 100vw;
+    background-color: #7E9EB5;
+}
+
+.Navbar-container .Search {
+    display: flex;
+    flex-direction: row;
+    width: 100vw;
+    height: 80%;
+    /* border: red 1px solid; */
+    justify-content: center;
+    align-items: center;
+}
+
+/* .Navbar-container .Search .Icon {
+    margin: 4px;
+} */
+.Navbar-container .Search input{
+    border: none;
+    /* margin-left: 15px; */
+    height: 1.3rem;
+    width: 180px;
+}
+.Navbar-container .Search input:focus{
+    outline: none;
+  }
+
+
+.Navbar-container .Nav-links {
+    margin: auto 7rem;
+    justify-content: center;
+}
+.Navbar-container .Nav-links a{
+    text-decoration: none;
+    color: white;
+    margin: 1rem;
+}
+
