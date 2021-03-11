@@ -33,11 +33,7 @@ class Main extends React.Component {
 
 
     render(){
-        if(this.state.loading){
-            return(
-                <Loading />
-            )
-        }else{
+       
             console.log(this.state.general[0]?.img, 'render')
         const {general} = this.state
         return(
@@ -65,6 +61,6 @@ class Main extends React.Component {
         
 }
     
-}
+
 
 export default Main
