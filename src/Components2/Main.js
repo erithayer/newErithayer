@@ -22,7 +22,7 @@ class Main extends React.Component {
             loading: true,
         })
         // console.log(this.state.general)
-        fetch('http://my-json-server.typicode.com/haykavagian/erithayerData/general')
+        fetch('http://my-json-server.typicode.com/erithayer/data/general')
             .then(response => response.ok ? response.json() : Promise.reject() )
             .then(data => this.setState({
                 general:data,
