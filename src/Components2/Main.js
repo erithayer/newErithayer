@@ -1,13 +1,13 @@
 import './Main.css'
-import img1 from '../Images/img (1).jpg'
-import img2 from '../Images/img (2).jpg'
-import img3 from '../Images/img (3).jpg'
-import img4 from '../Images/img (4).jpg'
+// import img1 from '../Images/img (1).jpg'
+// import img2 from '../Images/img (2).jpg'
+// import img3 from '../Images/img (3).jpg'
+// import img4 from '../Images/img (4).jpg'
 import React from 'react'
-import Loading from '../Components/Loading'
+// import Loading from '../Components/Loading'
 
 class Main extends React.Component {
-    constructor(){
+    constructor(props){
         super()
         this.state = {
             loading: false,
@@ -22,7 +22,7 @@ class Main extends React.Component {
             loading: true,
         })
         // console.log(this.state.general)
-        fetch('http://localhost:3000/general')
+        fetch('http://my-json-server.typicode.com/haykavagian/erithayerData/general')
             .then(response => response.ok ? response.json() : Promise.reject() )
             .then(data => this.setState({
                 general:data,
@@ -30,23 +30,28 @@ class Main extends React.Component {
             }))
     }
 
+    handleClick = (item) => {
+        this.props.history.push(`/details/${item.link}`)
 
+    }
 
     render(){
        
-            console.log(this.state.general[0]?.img, 'render')
+            // console.log(this.state.general[0]?.img, 'render')
         const {general} = this.state
         return(
         <div className="Container">
-            <div className="Grid-container">
+            <div className="cards">
                 {general.map(item => {
-                    console.log(item)
+                    // console.log(item)
                     return(
-                        <div className="Item Item1">
+                        <div className="card card1" key={item.rank} onClick={()=>this.handleClick(item)} >
+                            <div className="container">
                                 <img src={item.img} alt="" className="Image"/>
-                          
-                            <div className="Details">
-                                <h4>{item.userId}. {item.title} {item.lastName}</h4>
+                            </div>                              
+                            <div className="details">
+                                <h3>{item.rank}. {item.firstName} {item.lastName}</h3>
+                                <p>{item.position}</p>
                             </div>
                             
                         </div>
