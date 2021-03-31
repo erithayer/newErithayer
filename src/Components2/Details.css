@@ -34,7 +34,7 @@
     color: rgb(70, 70, 70);
     text-align: center;
     align-items: center;
-    padding-bottom: 30px;
+    /* padding-bottom: 30px; */
 }
 /* .line{
     width: 112px;
@@ -43,7 +43,7 @@
     position: absolute;
     } */
 .detail-container .top-container .info h3 {
-    margin: 20px;
+    margin: 10px;
     
 }
 .detail-container .top-container .info .details {

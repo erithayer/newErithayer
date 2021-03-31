@@ -5,9 +5,16 @@ import './Main.css'
 // import img4 from '../Images/img (4).jpg'
 import React from 'react'
 // import Loading from '../Components/Loading'
+import facebook from '../images/facebook.svg'
+import { FaFacebookSquare } from 'react-icons/fa'
+import { FaTwitterSquare } from 'react-icons/fa'
+import { FaInstagramSquare } from 'react-icons/fa'
+import { Link } from 'react-router-dom'
+
+
 
 class Main extends React.Component {
-    constructor(props){
+    constructor(){
         super()
         this.state = {
             loading: false,
@@ -22,7 +29,7 @@ class Main extends React.Component {
             loading: true,
         })
         // console.log(this.state.general)
-        fetch('http://my-json-server.typicode.com/erithayer/data/general')
+        fetch('https://my-json-server.typicode.com/erithayer/data/general')
             .then(response => response.ok ? response.json() : Promise.reject() )
             .then(data => this.setState({
                 general:data,
@@ -35,6 +42,13 @@ class Main extends React.Component {
 
     }
 
+    handleFacebookClick = (event, item) => {
+        event.stopPropagation()
+        const itemFacebook = item.facebook
+        // this.props.history.push(itemFacebook)
+        window.open(itemFacebook)
+        
+    }
     render(){
        
             // console.log(this.state.general[0]?.img, 'render')
@@ -52,6 +66,12 @@ class Main extends React.Component {
                             <div className="details">
                                 <h3>{item.rank}. {item.firstName} {item.lastName}</h3>
                                 <p>{item.position}</p>
+                                {/* <div className="icon"><img src={facebook} alt=""/></div> */}
+                                <i className='icons'>
+                                    <FaFacebookSquare onClick={(event) => this.handleFacebookClick(event,item)} className='faicon' style={{color:'#385d98'}} size={32}/>
+                                    <FaTwitterSquare style={{color:'#00acee'}} size={32}/>
+                                    <FaInstagramSquare style={{color:'#8a3ab9'}} size={32}/>
+                                </i>
                             </div>
                             
                         </div>

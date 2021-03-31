@@ -24,7 +24,7 @@ body{
 .Container .cards .card{
     cursor: pointer;
     width: 280px;
-    height: 430px;
+    height: 450px;
     background-color: rgb(255, 255, 255);
     border-radius: 10px;
     box-shadow: 0 0 30px rgba(0,0,0,0,17);
@@ -33,7 +33,7 @@ body{
 .Container .cards .card .container{
     /* border: green solid 2px; */
     position: initial;
-    height: 80%;
+    height: 75%;
     
     /* clip-path: polygon(0 0,100% 0,100% 85%, 0 100%); */
 }
@@ -51,9 +51,11 @@ body{
 
 
 .Container .cards .details {
-    height: 20%;
-    padding: 20px 10px;
+    height: 25%;
+    padding: 10px 10px;
     text-align: center;
+    display: grid;
+    justify-content: center;
 }
 
 .Container .cards .details>h3 {
@@ -74,9 +76,19 @@ body{
     line-height: 30px;
     font-weight: 400;
 }
+.Container .cards .details>i {
+    display: flex;
+    /* border: red solid 1px; */
+    justify-content: space-around;
+    align-items: center;
 
+}
 
-
+.Container .cards .details>i .faicon {
+    background: -webkit-linear-gradient(135deg, #8a3ab9,#fbad50,#cd486b,#4c68d7);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
 
 
 

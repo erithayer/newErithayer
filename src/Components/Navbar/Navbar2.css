@@ -1,6 +1,6 @@
 .navbar {
     width: 100vw;
-    background: rgb(107, 107, 197);
+    background: #7E9EB5;
     height: 60px;
     display: flex;
     justify-content: center;
@@ -8,8 +8,8 @@
     font-size: 1.2rem;
     position: sticky;
     top: 0;
-    border-top: rgb(48, 48, 48) solid 2px;
-    border-bottom: rgb(48, 48, 48) solid 2px;
+    border-top: rgb(22, 22, 22) solid 1.5px;
+    border-bottom: rgb(22,22,22) solid 1.5px;
 }
 
 .nav-container {
@@ -22,11 +22,31 @@
     /* border: red solid 1px; */
 }
 
+.navbar .nav-container .nav-logo{
+    display: flex;
+    height: 100%;
+    position: relative;
+    transition: all .2s ease-in-out;
+    opacity: 0;
+    /* border: red solid 1px; */
+    align-items: center;
+}
+.navbar .nav-container .hidden{
+opacity: 1;
+}
+.navbar .nav-container .nav-logo img {
+    height: 80%;
+    position: absolute;
+    left: -13em;
+    transition: all .2s ease-in-out;
+}
 .nav-menu {
     height: 70%;
     display: flex;
     list-style: none;
     text-align: center;
+    transition: all 0.2s ease-in-out;
+    opacity: 1;
     /* margin-right: 2rem; */
     /* border: yellow solid 1px; */
     /* justify-content: center; */
@@ -77,10 +97,37 @@
     
     display: none;
 }
-
-@media screen and (max-width: 960px) {
+.nav-icon img{
+    border: red solid 2px;
+}
+@media screen and (max-width: 1023px) {
     .navbar{
         width: 100vw;
+    }
+    .navbar .nav-container .nav-logo{
+        opacity: 0;
+        align-items: center;
+        /* border: red solid 1px; */
+        position: unset;
+        justify-content: center;
+        display: flex;
+        transition: all .2s ease-in-out;
+    }
+    .navbar .nav-container .hidden{
+        opacity: 1;
+    }
+    .navbar .nav-container .nav-logo img{
+        height: 80%;
+         position: unset;
+         transition: all .2s ease-in-out;
+    }
+    .nav-item:hover:after {
+        width: 100%;
+        background: none;
+        color: gray;
+    }
+    .nav-item a:hover:after {
+        color: gray;
     }
     .nav-menu{
         display: flex;
@@ -89,16 +136,17 @@
         height: 100vh;
         border-top: #fff solid 1px;
         position: absolute;
-        top: 60px;
+        top: 58px;
         left: -110%;
         opacity: 1;
         z-index: 999;
+        /* transition: all 0.4s ease; */
     }
     .nav-menu.active {
         background:rgb(68, 70, 90);
         left: 0px;
         opacity: 1;
-        transition: all 0.4s ease;
+        transition: all 0.2s ease-in-out;
         z-index: 999;
         align-items: center;
     }

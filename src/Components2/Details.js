@@ -11,13 +11,13 @@ function Details (props) {
     })
     const link = props.match.params.name
     useEffect(() => {
-        fetch(`http://my-json-server.typicode.com/erithayer/${link}/${link}`)
+        fetch(`https://my-json-server.typicode.com/erithayer/${link}/${link}`)
             .then(response => response.ok ? response.json() : Promise.reject())
             .then(data => {
                 // console.log(data)
                 setState(prevState => ({...prevState, details: data}))
             }) 
-    })
+    },[])
     return(
         <div>
             {state.details.map((item) => {

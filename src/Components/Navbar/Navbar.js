@@ -5,16 +5,23 @@ import {useState} from 'react'
 
 function  Navbar () {
     const [showMenu, setShowMenu] = useState(true)
+    const [menuChecked, setMenuChecked] = useState(true)
+    const toggleIcon = () => {
+        // console.log('event.target.checked')
+        setShowMenu(!showMenu)
+        setMenuChecked(!menuChecked)
+    }
+    // console.log(menuChecked)
 
     let menu 
     
     if(showMenu) {
         menu = <div class="menu">
         <div>
-            <div>
+            <div  className='click'>
             <ul>
-                <li><Link onClick={() => setShowMenu(!showMenu)} to="login">Մուտք</Link></li>
-                <li><Link to="/register">Գրանցվել</Link></li>
+                <li ><Link onClick={() => toggleIcon()}  to="login" >Մուտք</Link></li>
+                <li><Link to="/register" onClick={toggleIcon} >Գրանցվել</Link></li>
                 <li><Link to="/aboutUs">Մեր մասին</Link></li>
                 <li><Link to="/statistics">Վիճակագրություն</Link></li>
             </ul>
@@ -27,7 +34,7 @@ function  Navbar () {
         <div className="Navbar-container">
             
             <div class="menu-wrap">
-                <input type="checkbox" class="toggler" />
+                <input type="checkbox"  class="toggler" />
                 <div class="hamburger" onClick=""><div></div></div>{menu}
                 {/* <div class="menu">
                 <div>
