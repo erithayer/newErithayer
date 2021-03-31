@@ -31,7 +31,7 @@ function Navbar2 (props) {
             <div className="nav-container">
                 <div  className={scrollNav ? "nav-logo hidden" : "nav-logo "}><img src={logo} alt=""/></div>
                 <ul className={click ? "nav-menu active" : "nav-menu"}>
-                    <li className="nav-item" activeClassName="active"><Link onClick={handleClick} to="/login" className="nav-links">Մուտք</Link></li>
+                    <li className="nav-item" activeClassName="active"><Link onClick={handleClick} to="/login" className="nav-links">Մոasdfasdfւտք</Link></li>
                     <li className="nav-item" activeClassName="active"><Link onClick={handleClick} to="/statistics" className="nav-links">Վիճակագրություն</Link></li>
                     <li className="nav-item" activeClassName="active"><Link onClick={handleClick} to="/about" className="nav-links">Մեր մասին</Link></li>
                     <li className="nav-item" activeClassName="active"><Link onClick={handleClick} to="/" className="nav-links">Գլխավոր</Link></li>
