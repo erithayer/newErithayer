@@ -9,12 +9,9 @@ import Navbar2 from './Components/Navbar/Navbar2'
 import ScrollToTop from './Components/ScrollToTop';
 import Statistics from './Components/Statistics/Statistics';
 import About from './Components/About/About';
-import Navbar from './Components/Navbar/Navbar'
-import {useState} from 'react'
+// import Navbar from './Components/Navbar/Navbar'
+import {useState, memo} from 'react'
 import Redirect from './Components/RedirectPage/Redirect'
-import Junk from './Components/Junk/Junk';
-import Fetch from './Components/Junk/Fetch'
-
 
 
 function App() {
@@ -24,10 +21,9 @@ function App() {
       <ScrollToTop />
      <Header click={click} setClick = {setClick}/>
      <Navbar2 click={click} setClick = {setClick}/>
-     <Fetch />
      <Switch>
-        <Route path="/" component={Main} exact/>
-        <Route path="/details/:name" component={Details}/>
+        <Route path="/" component={(props) => <Main {...props} click ={click} />} exact/>
+        <Route path="/details/:name" component={(props) => <Details {...props} click ={click} />}/>
         <Route path="/login" component={Login}/>
         <Route path="/statistics" component={Statistics} />
         <Route path="/about" component={About} />
@@ -42,4 +38,4 @@ function App() {
   );
 }
 
-export default App;
+export default memo(App);

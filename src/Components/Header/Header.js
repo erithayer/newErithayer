@@ -1,10 +1,10 @@
 import './Header.css'
 import { Link } from 'react-router-dom'
 import erit from '../../erit.png'
-import {useState} from 'react'
+// import {useState} from 'react'
 
 function Header (props) {
-    const {click, setClick} = props
+    const {setClick} = props
     const handleClick = () => {setClick(false)}
     return(
         <div className="Header-container">

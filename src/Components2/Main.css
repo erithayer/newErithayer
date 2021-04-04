@@ -19,8 +19,15 @@ body{
     /* border: rgb(0, 4, 255) solid 2px; */
     justify-items: center;
     align-items: center;
+    transition: all 0.9s ease-in-out;
 }
-
+.Container {
+    transition: all 0.9s ease-in-out;
+}
+.Container.active{
+    height: 100vh;
+    overflow: hidden;
+}
 .Container .cards .card{
     cursor: pointer;
     width: 280px;
@@ -90,6 +97,10 @@ body{
     -webkit-text-fill-color: transparent;
 }
 
+/* @media screen and (max-width: 1023px) {
+    height: ;
+}
+ */
 
 
 

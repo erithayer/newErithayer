@@ -14,15 +14,17 @@ function Details (props) {
         fetch(`https://my-json-server.typicode.com/erithayer/${link}/${link}`)
             .then(response => response.ok ? response.json() : Promise.reject())
             .then(data => {
-                // console.log(data)
                 setState(prevState => ({...prevState, details: data}))
             }) 
     },[])
+
+    const {click} = props
+    
     return(
         <div>
             {state.details.map((item) => {
                 return(
-                    <div className="detail-container" key={item.rank}>
+                    <div className={click ? "detail-container active" : "detail-container"} key={item.rank}>
                         <div className="top-container" >
                             <div className="image">
                                 <img src={item.img} alt=""/>
@@ -42,9 +44,9 @@ function Details (props) {
                             </div>
                             
                         </div> 
-                        <div className="line"></div>
+                        {/* <div className="line"></div> */}
                         <div className="biography">
-                                <h2>Կենսագրություն</h2>
+                               <div className="title"><h2>Կենսագրություն</h2></div> 
                                 <p>{item.biography}</p>
                         </div> 
                     </div>

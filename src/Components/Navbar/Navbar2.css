@@ -1,3 +1,9 @@
+@font-face{
+    font-family: Chartarapet-Regular;
+    src: url('../../Fonts/Chartarapet-Regular.ttf'),
+    /* url('Thonburi-Bold.eot'); IE */
+}
+
 .navbar {
     width: 100vw;
     background: #7E9EB5;
@@ -30,6 +36,7 @@
     opacity: 0;
     /* border: red solid 1px; */
     align-items: center;
+    cursor: pointer;
 }
 .navbar .nav-container .hidden{
 opacity: 1;
@@ -38,7 +45,7 @@ opacity: 1;
     height: 80%;
     position: absolute;
     left: -13em;
-    transition: all .2s ease-in-out;
+    transition: all .1s ease-in-out;
 }
 .nav-menu {
     height: 70%;
@@ -51,8 +58,14 @@ opacity: 1;
     /* border: yellow solid 1px; */
     /* justify-content: center; */
 }
-
+.nav-menu.active{
+    height: calc(100vh - 140px);
+}
 .nav-links {
+    font-family: "Chartarapet-Regular";
+    font-weight: lighter;
+    
+    /* src: url('../../Fonts/Chartarapet-Regular.otf'); */
     display: flex;
     height: 100%;
     /* padding-top: 100px; */
@@ -103,7 +116,10 @@ opacity: 1;
 @media screen and (max-width: 1023px) {
     .navbar{
         width: 100vw;
+        position: sticky;
+        top: 0;
     }
+    
     .navbar .nav-container .nav-logo{
         opacity: 0;
         align-items: center;
@@ -111,7 +127,7 @@ opacity: 1;
         position: unset;
         justify-content: center;
         display: flex;
-        transition: all .2s ease-in-out;
+        transition: all .1s ease-in-out;
     }
     .navbar .nav-container .hidden{
         opacity: 1;
@@ -119,7 +135,8 @@ opacity: 1;
     .navbar .nav-container .nav-logo img{
         height: 80%;
          position: unset;
-         transition: all .2s ease-in-out;
+         transition: all .1s ease-in-out;
+         
     }
     .nav-item:hover:after {
         width: 100%;
@@ -141,12 +158,14 @@ opacity: 1;
         opacity: 1;
         z-index: 999;
         /* transition: all 0.4s ease; */
+        /* transition: opacity 0.2s; */
     }
     .nav-menu.active {
+        height: 100vh;
         background:rgb(68, 70, 90);
         left: 0px;
         opacity: 1;
-        transition: all 0.2s ease-in-out;
+        transition: all 0.1s ease-in-out;
         z-index: 999;
         align-items: center;
     }
