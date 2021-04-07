@@ -16,7 +16,7 @@ function Navbar2 (props) {
     const [scrollNav, setScrollNav] = useState(false)
     const closeMenu = () => setClick(false)
      const changeNav = () => {
-        if(window.scrollY >= 80) {
+        if(window.scrollY >= 200) {
           setScrollNav(true)
          } else {
              setScrollNav(false)
@@ -35,10 +35,14 @@ function Navbar2 (props) {
             <div className="nav-container">
                 <div onClick={() => ScrollToTop()} className={scrollNav ? "nav-logo hidden" : "nav-logo "}><img src={logo} alt=""/></div>
                 <ul className={click ? "nav-menu active" : "nav-menu"}>
-                    <li className="nav-item active" ><Link onClick={() => closeMenu()} to="/login" className="nav-links">Մուտք</Link></li>
-                    <li className="nav-item active" ><Link onClick={() => closeMenu()} to="/statistics" className="nav-links">Վիճակագրություն</Link></li>
-                    <li className="nav-item active" ><Link onClick={() => closeMenu()} to="/about" className="nav-links">Մեր մասին</Link></li>
-                    <li className="nav-item active" ><Link onClick={() => closeMenu()} to="/" className="nav-links">Գլխավոր</Link></li>
+                    <li className="nav-item active" ><Link onClick={() => closeMenu()} to="/" className="nav-links active"><span>Գլխավոր</span> </Link></li>              
+                    <li className="nav-item active " ><Link onClick={() => closeMenu()} to="/about" className="nav-links erithay"><span>երիտհայեր</span> </Link></li>
+                    <li className="nav-item active" ><Link onClick={() => closeMenu()} to="/statistics" className="nav-links"><span>Վիճակագրությու</span> ն</Link></li>
+                    <li className="nav-item active" ><Link onClick={() => closeMenu()} to="/about" className="nav-links"><span>Մեր մասին</span> </Link></li>
+                    {/* <li className="nav-item active" ><Link onClick={() => closeMenu()} to="/login" className="nav-links login">Մուտք</Link></li> */}
+                    <li className="nav-item active" ><Link onClick={() => closeMenu()} to="/login" className="nav-links button"><button className="login-button" onClick={() => closeMenu()}>Մուտք</button></Link></li>
+                    <li className="nav-item active" ></li>
+                    
                 </ul>
                 <div className="nav-icon" onClick={() => handleClick()}>
                     <i className={click ? 'fas fa-times' : 'fas fa-bars'}></i>

@@ -3,7 +3,7 @@ import React from 'react'
 import { FaFacebookSquare } from 'react-icons/fa'
 import { FaTwitterSquare } from 'react-icons/fa'
 import { FaInstagramSquare } from 'react-icons/fa'
-import Loading from '../Components/Loading/Loading'
+import Loading from '../../src/Components/Loading'
 
 
 
@@ -51,7 +51,7 @@ class Main extends React.PureComponent {
     render(){
         const {click} = this.props
         const {general, loading} = this.state
-
+        // console.log(this.state.general[1].age)
         console.log('rendered')
         if(loading){
             return <Loading />

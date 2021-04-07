@@ -12,14 +12,15 @@ import About from './Components/About/About';
 // import Navbar from './Components/Navbar/Navbar'
 import {useState, memo} from 'react'
 import Redirect from './Components/RedirectPage/Redirect'
-
+import Header2 from './Components/Header/Header2'
+import Loading from './Components/Loading';
 
 function App() {
     const [click, setClick] = useState(false) 
   return (
     <Router>
       <ScrollToTop />
-     <Header click={click} setClick = {setClick}/>
+     <Header2 click={click} setClick = {setClick}/>
      <Navbar2 click={click} setClick = {setClick}/>
      <Switch>
         <Route path="/" component={(props) => <Main {...props} click ={click} />} exact/>
