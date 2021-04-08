@@ -17,7 +17,9 @@
     border-top: rgb(22, 22, 22) solid 1.5px;
     border-bottom: rgb(22,22,22) solid 1.5px;
 }
-
+.nav-menu .nav-item .active{
+    color: red;
+}
 .nav-container {
     display: flex;
     justify-content: center;
@@ -58,12 +60,12 @@ opacity: 1;
     /* border: yellow solid 1px; */
     /* justify-content: center; */
 }
-.nav-menu .nav-item{
+/* .nav-menu .nav-item{
     height: 100%;
-}
+} */
 
 .nav-links {
-    font-family: "", ;
+    font-family: "DejaVuSans-Bold", ;
     font-weight: lighter;
     display: flex;
     flex-direction: row;
@@ -139,9 +141,9 @@ opacity: 1;
     
 }
 
-.nav-item .active {
+/* .nav-item .active {
     color: rgb(158, 158, 158);
-}
+} */
 .fas .fa-times{
     color: white;
 }
@@ -236,6 +238,10 @@ opacity: 1;
         justify-content: center;
     
     }
+    .nav-menu .nav-item{
+    height:10%;
+}
+
     .nav-item.active{
         height: 40px;
     }

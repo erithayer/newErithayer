@@ -34,9 +34,9 @@ a{
 }
 
 .Header-container .Container .Title h1 {
-    font-family: "",;
+    font-family: "DejaVuSans-Bold", 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size: 1.5rem;
-    font-weight: 200;
+    font-weight: lighter;
 
 
 }
