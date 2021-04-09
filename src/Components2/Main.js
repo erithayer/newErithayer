@@ -1,19 +1,13 @@
 import './Main.css'
-// import img1 from '../Images/img (1).jpg'
-// import img2 from '../Images/img (2).jpg'
-// import img3 from '../Images/img (3).jpg'
-// import img4 from '../Images/img (4).jpg'
 import React from 'react'
-// import Loading from '../Components/Loading'
-import facebook from '../images/facebook.svg'
 import { FaFacebookSquare } from 'react-icons/fa'
 import { FaTwitterSquare } from 'react-icons/fa'
 import { FaInstagramSquare } from 'react-icons/fa'
-import { Link } from 'react-router-dom'
+import Loading from '../../src/Components/Loading'
 
 
 
-class Main extends React.Component {
+class Main extends React.PureComponent {
     constructor(){
         super()
         this.state = {
@@ -22,22 +16,28 @@ class Main extends React.Component {
         }
     }
 
-
+    // shouldComponentUpdate(nextProps, nextState) {
+    //     console.log(nextProps.click);
+    //     console.log(this.props.click);
+    //     if(nextProps.click === this.props.click)
+    //     return false;  
+    //   }
 
     componentDidMount() {
         this.setState({
             loading: true,
         })
-        // console.log(this.state.general)
+        
         fetch('https://my-json-server.typicode.com/erithayer/data/general')
             .then(response => response.ok ? response.json() : Promise.reject() )
             .then(data => this.setState({
                 general:data,
                 loading:false
             }))
+            
     }
 
-    handleClick = (item) => {
+    handleCardClick = (item) => {
         this.props.history.push(`/details/${item.link}`)
 
     }
@@ -45,21 +45,23 @@ class Main extends React.Component {
     handleFacebookClick = (event, item) => {
         event.stopPropagation()
         const itemFacebook = item.facebook
-        // this.props.history.push(itemFacebook)
         window.open(itemFacebook)
         
     }
     render(){
-       
-            // console.log(this.state.general[0]?.img, 'render')
-        const {general} = this.state
+        const {click} = this.props
+        const {general, loading} = this.state
+        // console.log(this.state.general[1].age)
+        console.log('rendered')
+        if(loading){
+            return <Loading />
+        }
         return(
-        <div className="Container">
-            <div className="cards">
+            <div  className={click ? "Container active" : "Container"}>
+              <div className="cards">
                 {general.map(item => {
-                    // console.log(item)
                     return(
-                        <div className="card card1" key={item.rank} onClick={()=>this.handleClick(item)} >
+                        <div className="card card1" key={item.rank} onClick={()=>this.handleCardClick(item)} >
                             <div className="container">
                                 <img src={item.img} alt="" className="Image"/>
                             </div>                              

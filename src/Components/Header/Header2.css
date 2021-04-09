@@ -1,0 +1,79 @@
+@font-face{
+    font-family: "DejaVuSans-Bold";
+    src: url('../../Fonts/DejaVuSans-Bold.ttf'),
+    /* url('Thonburi-Bold.eot'); IE */
+}
+.Header-container{
+    display: flex;
+    height: 370px;
+    width: 100vw;
+}
+a{
+    text-decoration: none;
+}
+.Header-container .Container{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100vw;      
+    background: url('../../images/MAIN3.jpg');
+    background-position: top;
+    background-position-x: center;
+    background-position-y: top;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    justify-content: center;
+    align-items: center;
+}
+.Header-container .Container .Logo {
+    height: 30%;
+}
+.Header-container .Container .Logo img{
+    height: 100%;
+    display: flex;
+}
+
+.Header-container .Container .Title h1 {
+    font-family: "DejaVuSans-Bold", 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 1.5rem;
+    font-weight: lighter;
+
+
+}
+@media  screen and (max-width: 960px){
+
+}
+@media  screen and (max-width: 500px){
+    .Header-container{
+        height: 150px;
+        width: 100vw;
+        display: flex;
+    }
+    .Header-container .Container{
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        width: 100vw;      
+        background: url('../../images/MAIN-mobile.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        justify-content: center;
+        align-items: center;
+        
+    }
+    .Header-container .Container .Logo {
+        display: flex;
+        justify-content: center;
+        height: 50%;
+        width: 100%;
+        
+    }
+    .Header-container .Container .Logo img{
+        height: 100%;
+        display: flex;
+        margin: 0;
+    }
+    .Header-container .Container .Title h1 {
+        font-size: 1rem;
+    }
+}
