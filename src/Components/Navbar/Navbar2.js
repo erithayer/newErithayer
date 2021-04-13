@@ -1,11 +1,11 @@
 import './Navbar2.css'
-import { Link } from 'react-router-dom'
+import { Link, NavLink } from 'react-router-dom'
 import {useState } from 'react'
 import { useEffect} from 'react'
 // import {handleClick} from '../../Components/Helpers/Helpers' 
 // import menu from '../../images/menu.svg'
-import logo from '../../images/logo.png'
-
+import logo from '../../images/logo-5.png'
+import search from '../../images/search-gray.png'
 
 
 function Navbar2 (props) {
@@ -35,39 +35,43 @@ function Navbar2 (props) {
     return(
         <nav className="navbar">            
             <div className="nav-container">
-                <div onClick={() => ScrollToTop()} className={scrollNav ? "nav-logo hidden" : "nav-logo "}><img src={logo} alt=""/></div>
+                <NavLink to="/" onClick={() => ScrollToTop()} className={scrollNav ? "nav-logo hidden" : "nav-logo "}><img src={logo} alt=""/></NavLink>
                 <ul className={click ? "nav-menu active" : "nav-menu"}>
+                    <li className="search"><div className="search-div"><input type="text" placeholder="Որոնում"/><img src={search} alt=""/></div></li>
                     <li className="nav-item" >
-                        <Link  
+                        <NavLink  
+                            exact={true}
                             onClick={() => closeMenu()} 
                             to="/" 
-                            activeClassName="active" 
-                            className="nav-links"><span>Գլխավոր</span> 
-                        </Link></li>              
+                            className="nav-links"
+                            activeClassName={click ? "" : "selected"}
+                            id="home"><span>Գլխավոր</span> 
+                        </NavLink></li>              
                     <li className="nav-item " >
-                        <Link 
+                        <NavLink 
+                             exact
                             onClick={() => closeMenu()} 
-                            to="/about" 
-                            activeClass="active" 
-                            className="nav-links erithay"><span>երիտհայեր</span> 
-                        </Link></li>
+                            to="/erithayer" 
+                            className="nav-links erithay"
+                            activeClassName={click ? "" : "selected"}><span>երիտհայեր</span> 
+                        </NavLink></li>
                     <li className="nav-item" >
-                        <Link 
+                        <NavLink 
                             onClick={() => closeMenu()} 
                             to="/statistics" 
-                            activeClass="active" 
-                            className="nav-links"><span>Վիճակագրություն</span>
-                        </Link></li>
+                            className="nav-links"
+                            activeClassName={click ? "" : "selected"}><span>Վիճակագրություն</span>
+                        </NavLink></li>
                     <li className="nav-item" >
-                        <Link 
+                        <NavLink 
                             onClick={() => closeMenu()} 
                             to="/about" 
-                            activeClass="active" 
-                            className="nav-links"><span>Մեր մասին</span>
-                        </Link></li>
-                    {/* <li className="nav-item active" ><Link onClick={() => closeMenu()} to="/login" className="nav-links login">Մուտք</Link></li> */}
-                    <li className="nav-item" >
-                        <Link 
+                            className="nav-links"
+                            activeClassName={click ? "" : "selected"}><span>Մեր մասին</span>
+                        </NavLink></li>
+                    {/* <li className="nav-item active" ><NavLink onClick={() => closeMenu()} to="/login" className="nav-links login">Մուտք</NavLink></li> */}
+                    <li className="nav-item" id="login-button">
+                        <NavLink 
                             onClick={() => closeMenu()} 
                             to="/login" 
                             className="nav-links button">
@@ -76,10 +80,12 @@ function Navbar2 (props) {
                                     onClick={() => closeMenu()}>
                                         Մուտք
                                 </button>
-                        </Link></li>                    
+                        </NavLink></li>
+                        
+                        {/* <li className="search"><input type="text" placeholder="Որոնում"/><i class="fas fa-search"></i></li>                  */}
                 </ul>
                 <div className="nav-icon" onClick={() => handleClick()}>
-                    <i className={click ? 'fas fa-times' : 'fas fa-bars'}></i>
+                    <i className={click ? 'fas fa-times ' : 'fas fa-bars'}></i>
                 </div>
                 
             </div>

@@ -1,3 +1,11 @@
+@font-face {
+  font-family: "DejaVuSans-ExtraLight";
+  src: url('../Fonts/DejaVuSans-ExtraLight.ttf');
+  font-weight: normal;
+  font-style: normal;
+
+}
+
 .Loading-container{
         display: flex;
         align-items: center;
@@ -29,19 +37,21 @@
   .Loading {
     margin: 0;
     padding: 0;
-    font-family: ‘Arial Narrow’, sans-serif;
-    font-weight: 100;
+    font-family: tahoma;
+    font-weight: lighter;
     font-size: 1.1em;
-    color: #a3e1f0;
+    color: #ffffff;
   }
   
   .Loading-container h1 span {
-    position: relative;
-    top: 0.63rem;  
+    font-family: "DejaVuSans-ExtraLight", Tahoma;
+    /* position: relative; */
+    top: .1rem;  
     display: inline-block;
     text-transform: uppercase;  
     opacity: 0;
-    transform: rotateX(-90deg);
+    /* transform: rotateX(-90deg); */
+    letter-spacing: 10px;
   }
   
   .let1 {
@@ -81,7 +91,7 @@
   }
   
   @keyframes drop {
-      50% {
+      90% {
           opacity: 0.5;
       }
       10% {
@@ -90,12 +100,12 @@
           transform: rotateX(-360deg);
       }
       80% {
-          opacity: 1;
+          opacity: 0;
           top: 3.78em;
           transform: rotateX(-360deg);
       }
       90% {
-          opacity: 0.5;
+          opacity: 0;
       }
       100% {
           opacity: 0;
