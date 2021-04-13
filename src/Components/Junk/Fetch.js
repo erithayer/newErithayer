@@ -1,30 +1,34 @@
-// import React from 'react'
+import React from 'react'
 
 
-// class Fetch extends React.Component{
-//     constructor(){
-//         super()
-//         this.state = {
-//             data: [],
+class Fetch extends React.Component{
+    constructor(){
+        super()
+        this.state = {
+            data: [],
 
-//         }
-//     }
+        }
+    }
 
-//     componentDidMount(){
-//         fetch('http://api.erithay.com/persons')
-//             .then(response => response.ok ? response.json() : Promise.reject())
-//             .then(data => console.log(data))
-//     }
+    componentDidMount(){
+        fetch('https://api.erithay.com/things')
+            .then(response => response.ok ? response.json() : Promise.reject())
+            .then(data => {
+                console.log(data)
+                this.setState({data:data})
+            }
+                )
+    }
 
-//     render(){
-//         // console.log(this.state.data)
-//         return(
-//             <div>Fetch</div>
-//         )
+    render(){
+        // console.log(this.state.data)
+        return(
+            <div>{this.state.data.name}</div>
+        )
         
-//     }
+    }
 
-// }
+}
 
 
-// export default Fetch
+export default Fetch

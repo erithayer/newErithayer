@@ -4,14 +4,14 @@ import logo from '../../images/logo.png'
 // import {useState} from 'react'
 
 function Header (props) {
-    const {setClick} = props
-    const handleClick = () => {setClick(false)}
+    // const {setClick} = props
+    // const handleClick = () => {setClick(false)}
     return(
         <Link to="/"><div className="Header-container">
             
             <div className="Container">
                 <div className="Logo"><img src={logo} alt=""/></div>
-                <div className="Title"><h1>Դուք եք պատասխանատու ամենի համար</h1></div>
+                <div className="Title"><h1>Վառել բոլորին տնով տեղով</h1></div>
             </div>           
             <div className="title">
                 

@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/static/css/main.94edde49.chunk.css",
+    "main.js": "/static/js/main.864492c9.chunk.js",
+    "main.js.map": "/static/js/main.864492c9.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.403f90cb.js",
+    "runtime-main.js.map": "/static/js/runtime-main.403f90cb.js.map",
+    "static/js/2.c16f0e52.chunk.js": "/static/js/2.c16f0e52.chunk.js",
+    "static/js/2.c16f0e52.chunk.js.map": "/static/js/2.c16f0e52.chunk.js.map",
+    "index.html": "/index.html",
+    "static/css/main.94edde49.chunk.css.map": "/static/css/main.94edde49.chunk.css.map",
+    "static/js/2.c16f0e52.chunk.js.LICENSE.txt": "/static/js/2.c16f0e52.chunk.js.LICENSE.txt",
+    "static/media/Header.css": "/static/media/ARMGUARD.ee736439.TTF",
+    "static/media/Header2.css": "/static/media/MAIN3.63cb6487.jpg",
+    "static/media/erit.8a4314bb.png": "/static/media/erit.8a4314bb.png",
+    "static/media/logo.393b0091.png": "/static/media/logo.393b0091.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.403f90cb.js",
+    "static/js/2.c16f0e52.chunk.js",
+    "static/css/main.94edde49.chunk.css",
+    "static/js/main.864492c9.chunk.js"
+  ]
+}

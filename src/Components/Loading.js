@@ -9,12 +9,12 @@ function Loading(){
         style={{width: width, height: height}}
         className='Loading'/> */}
         <h1 className="Loading">
-            <span class="let1">Բ</span>  
-            <span class="let2">Ե</span>  
-            <span class="let3">Ռ</span>  
-            <span class="let4">Ն</span>  
-            <span class="let5">ՈՒ</span>  
-            <span class="let6">Մ</span>   
+            <span className="let1">Բ </span>  
+            <span className="let2"> Ե </span>  
+            <span className="let3"> Ռ </span>  
+            <span className="let4"> Ն </span>
+            <span className="let5"> ՈՒ </span>  
+            <span className="let6"> Մ </span>   
          </h1>
 
         </div>
