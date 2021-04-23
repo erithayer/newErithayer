@@ -16,7 +16,7 @@ function Details (props) {
             .then(data => {
                 setState(prevState => ({...prevState, details: data}))
             }) 
-    },[])
+    },[link])
 
     const {click} = props
     

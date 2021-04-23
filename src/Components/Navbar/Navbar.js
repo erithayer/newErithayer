@@ -1,4 +1,4 @@
-import './Navbar.css'
+// import './Navbar.css'
 import { FiSearch } from 'react-icons/fi'
 import { Link } from 'react-router-dom'
 import {useState} from 'react'

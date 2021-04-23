@@ -13,17 +13,12 @@ class Fetch extends React.Component{
     componentDidMount(){
         fetch('https://api.erithay.com/things')
             .then(response => response.ok ? response.json() : Promise.reject())
-            .then(data => {
-                console.log(data)
-                this.setState({data:data})
-            }
-                )
+            .then(data =>  console.log(data))
     }
-
+    
     render(){
-        // console.log(this.state.data)
         return(
-            <div>{this.state.data.name}</div>
+            <div>hello</div>
         )
         
     }
