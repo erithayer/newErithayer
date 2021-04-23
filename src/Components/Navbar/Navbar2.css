@@ -14,7 +14,7 @@
     justify-content: center;
     align-items: center;
     font-size: 1.2rem;
-    position: sticky;
+    position: fixed;
     top: 0;
     border-top: rgb(22, 22, 22) solid 1.5px;
     border-bottom: rgb(22,22,22) solid 1.5px;
@@ -80,7 +80,7 @@
     color: rgb(211, 207, 207);
     padding-left: 8px;
     outline: none;
-    font-size: 1rem;
+    font-size: .9rem;
 }
 .nav-menu .search input:focus{
     outline: none;
@@ -110,9 +110,10 @@ opacity: 1;
 }
 .navbar .nav-container .nav-logo img {
     height:60%;
-    position: absolute;
+    /* position: absolute; */
     /* left: -5em; */
     transition: all .1s ease-in-out;
+    margin-left: 30px;
 }
 
 /* .nav-menu .nav-item{
@@ -120,7 +121,7 @@ opacity: 1;
 } */
 .nav-item a{
         font-family: "DejaVuSans-ExtraLight"; 
-        font-size: 1rem;
+        font-size: .9rem;
         width: 100%;
         transition: width 0.3s ease, background-color 0.1s ease;
 }
@@ -215,7 +216,7 @@ opacity: 1;
 .nav-icon img{
     border: red solid 2px;
 }
-@media only screen and (max-width: 1110px) and (min-width: 950px)  {
+@media  screen and (max-width: 1110px) and (min-width: 950px)  {
     .nav-item a{
         font-family: "DejaVuSans-ExtraLight"; 
         font-size: .8rem;
@@ -230,7 +231,7 @@ opacity: 1;
     
 }
 
-@media only screen and (max-width: 1250px){
+@media  screen and (max-width: 1250px){
     .nav-menu .search{
         margin: 0;
         display: flex;
@@ -250,16 +251,19 @@ opacity: 1;
         position: sticky;
         top: 0;
     }
-    
+    .navbar .nav-container{
+        justify-content: flex-start;
+    }
     .navbar .nav-container .nav-logo{
         opacity: 0;
         align-items: center;
         /* border: red solid 1px; */
         position: unset;
-        justify-content: center;
+        justify-content: flex-start;
         display: flex;
         transition: all .1s ease-in-out;
     }
+    
     .nav-menu .search{
         width: 100%;
         margin-left: 0;
@@ -276,8 +280,9 @@ opacity: 1;
     }
     .navbar .nav-container .nav-logo img{
         height: 60%;
-         position: unset;
-         transition: all .1s ease-in-out;
+        position: unset;
+        transition: all .1s ease-in-out;
+        margin-left: 30px;
          
     }
     a .nav-item .nav-links span{
@@ -310,7 +315,7 @@ opacity: 1;
         background:#25303a;
         left: 0px;
         opacity: 1;
-        transition: all 0.1s ease-in-out;
+        transition: all 0.1s step-start;
         z-index: 999;
         align-items: left;
         justify-content: flex-start;

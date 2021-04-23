@@ -1,10 +1,5 @@
-@font-face {
-    font-family: "DejaVuSans-ExtraLight";
-    src: url('../Fonts/DejaVuSans-ExtraLight.ttf');
-    font-weight: normal;
-    font-style: normal;
 
-}
+
 
 *{
     box-sizing: border-box;
@@ -31,7 +26,7 @@ body{
     width: 80%;
     margin-top: 40px;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px,1fr));
     padding: 20px;
     row-gap: 40px;
     justify-items: center;
@@ -43,12 +38,12 @@ body{
 }
 .Container .cards .card{
     cursor: pointer;
-    width: 9vw;
-    min-width: 150px;
-    max-width: 160px;
-    height: 270px;
+    width: 15vw;
+    min-width: 250px;
+    max-width: 280px;
+    height: 400px;
     background-color: rgb(255, 255, 255);
-    border-radius: 7px;
+    border-radius: 10px;
     box-shadow: 0 0 30px rgba(0,0,0,0,17);
     border: rgb(255, 255, 255) solid 1px;
 }
@@ -66,26 +61,26 @@ body{
     /* border: rgb(238, 58, 148) solid 1px; */
     
     display: block;
-    border-radius: 8px 8px 0 0;
+    border-radius: 9px 9px 0 0;
     z-index: -5;
 }
 
 
 
 .Container .cards .details {
-    height: 20%;
-    padding: 10px 5px;
+    height: 25%;
+    padding: 10px 10px;
     text-align: center;
     display: grid;
     justify-content: center;
 }
 
 .Container .cards .details>h3 {
-    font-family: "ARMTMS", Tahoma;
-    font-weight:500;
+    font-family: '',;
+    font-weight: 400;
     height: 100%;
     color: rgb(0, 0, 0);
-    font-size: 14px;
+    font-size: 18px;
 }
 
 .Container .cards .details>p {
@@ -93,12 +88,9 @@ body{
     font-weight: 200;
     height: 100%;
     color: rgb(82, 82, 82);
-    font-size: 13px;
-    line-height: 15px;
+    font-size: 15px;
+    line-height: 30px;
     font-weight: 400;
-    font-style: italic;
-    padding-top: 5px;
-
 }
 .Container .cards .details>i {
     display: flex;
@@ -123,57 +115,7 @@ body{
     .Container .cards{
         /* z-index: 1; */
         width: 100%;
-        margin-top: 40px;
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(300px,1fr));
-        padding: 20px;
-        row-gap: 40px;
-        justify-items: center;
-        align-items: center;
     }
-    .Container .cards .card{
-        cursor: pointer;
-        width: 15vw;
-        min-width: 250px;
-        max-width: 280px;
-        height: 400px;
-        background-color: rgb(255, 255, 255);
-        border-radius: 10px;
-        box-shadow: 0 0 30px rgba(0,0,0,0,17);
-        border: rgb(255, 255, 255) solid 1px;
-    }
-    .Container .cards .details {
-        height: 20%;
-        padding: 10px 10px;
-        text-align: center;
-        display: grid;
-        justify-content: center;
-    }
-    .Container .cards .card .container{
-        /* border: green solid 2px; */
-        position: initial;
-        height: 80%;
-        
-        /* clip-path: polygon(0 0,100% 0,100% 85%, 0 100%); */
-    }
-    .Container .cards .details>h3 {
-        font-family: "ARMTMS", Tahoma;
-        font-weight: 400;
-        height: 100%;
-        color: rgb(0, 0, 0);
-        font-size: 18px;
-    }
-    
-    .Container .cards .details>p {
-        font-family: "ARMTMS", Tahoma;
-        font-weight: 200;
-        height: 100%;
-        color: rgb(82, 82, 82);
-        font-size: 15px;
-        line-height: 30px;
-        font-weight: 400;
-    }
-
  }
 
 

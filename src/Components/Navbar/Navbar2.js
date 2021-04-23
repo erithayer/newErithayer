@@ -1,5 +1,5 @@
 import './Navbar2.css'
-import { Link, NavLink } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 import {useState } from 'react'
 import { useEffect} from 'react'
 // import {handleClick} from '../../Components/Helpers/Helpers' 
@@ -18,7 +18,7 @@ function Navbar2 (props) {
 
     }
      const changeNav = () => {
-        if(window.scrollY >= 200) {
+        if(window.scrollY >= 70) {
           setScrollNav(true)
          } else {
              setScrollNav(false)
@@ -37,7 +37,7 @@ function Navbar2 (props) {
             <div className="nav-container">
                 <NavLink to="/" onClick={() => ScrollToTop()} className={scrollNav ? "nav-logo hidden" : "nav-logo "}><img src={logo} alt=""/></NavLink>
                 <ul className={click ? "nav-menu active" : "nav-menu"}>
-                    <li className="search"><div className="search-div"><input type="text" placeholder="Որոնում"/><img src={search} alt=""/></div></li>
+                    {/* <li className="search"><div className="search-div"><input type="text" placeholder="Որոնում"/><img src={search} alt=""/></div></li> */}
                     <li className="nav-item" >
                         <NavLink  
                             exact={true}
@@ -70,7 +70,7 @@ function Navbar2 (props) {
                             activeClassName={click ? "" : "selected"}><span>Մեր մասին</span>
                         </NavLink></li>
                     {/* <li className="nav-item active" ><NavLink onClick={() => closeMenu()} to="/login" className="nav-links login">Մուտք</NavLink></li> */}
-                    <li className="nav-item" id="login-button">
+                    {/* <li className="nav-item" id="login-button">
                         <NavLink 
                             onClick={() => closeMenu()} 
                             to="/login" 
@@ -80,7 +80,7 @@ function Navbar2 (props) {
                                     onClick={() => closeMenu()}>
                                         Մուտք
                                 </button>
-                        </NavLink></li>
+                        </NavLink></li> */}
                         
                         {/* <li className="search"><input type="text" placeholder="Որոնում"/><i class="fas fa-search"></i></li>                  */}
                 </ul>

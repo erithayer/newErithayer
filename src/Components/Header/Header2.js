@@ -11,7 +11,7 @@ function Header (props) {
             
             <div className="Container">
                 <div className="Logo"><img src={logo} alt=""/></div>
-                <div className="Title"><h1>Վառել բոլորին տնով տեղով</h1></div>
+                {/* <div className="Title"><h1>Վառել բոլորին տնով տեղով</h1></div> */}
             </div>           
             <div className="title">
                 

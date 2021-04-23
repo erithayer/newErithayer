@@ -1,4 +1,4 @@
-@font-face {
+/* @font-face {
     font-family: "DejaVuSans-ExtraLight";
     src: url('../../Fonts/DejaVuSans-ExtraLight.ttf');
     font-weight: normal;
@@ -8,7 +8,7 @@
 
 .Header-container{
     display: flex;
-    height: 370px;
+    height:100px;
     width: 100vw;
 }
 a{
@@ -81,4 +81,4 @@ a{
         font-size: .85rem;
         letter-spacing: 0;
     }
-}
+} */
