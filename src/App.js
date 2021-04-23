@@ -25,10 +25,10 @@ function App() {
   return (
     <Router>
       <ScrollToTop />
-     <Header2 click={click} setClick = {setClick}/>
+     <Header3 click={click} setClick = {setClick}/>
      {/* <Header3 /> */}
      <Navbar2 click={click} setClick = {setClick}/>
-     <Fetch />
+     {/* <Fetch /> */}
      
      <Switch>
         <Route path="/" exact component={Erithayer} />

@@ -48,9 +48,9 @@
 }
 .Header-container .Container .Search input:focus{
     outline: none;
-    width: 150px;
-    background-color: rgb(210, 215, 235);
-    border-radius: 6px;
+    width: 180px;
+    background-color: rgb(241, 242, 247);
+    border-radius: 2px;
 }
 
 .Header-container .Container .Search img{
